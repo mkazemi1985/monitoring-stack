@@ -1,5 +1,5 @@
 
-# Monitoring Stack (Project 7)
+# Monitoring Stack
 
 A reproducible **Prometheus + Grafana + Alertmanager** setup for local observability.
 
@@ -13,7 +13,7 @@ A reproducible **Prometheus + Grafana + Alertmanager** setup for local observabi
 ## Quick start
 
 ```bash
-git clone https://github.com/<YourUser>/monitoring-stack.git
+git clone https://github.com/mkazemi1985/monitoring-stack.git
 cd monitoring-stack
 docker compose up -d          # spin up the stack
 ```
@@ -47,7 +47,3 @@ monitoring-stack/
 2. **Expose your app metrics** – instrument your service and append a new `job_name` in `prometheus.yml`.  
 3. **Dashboards** – create custom Grafana dashboards or import community ones.  
 4. **Retention & backups** – tune `--storage.tsdb.retention.time` and back‑up `prom_data/`.
-
-## License
-
-This project is released under the MIT License – see [LICENSE](LICENSE) for details.
