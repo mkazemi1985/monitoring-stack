@@ -1,0 +1,13 @@
+groups:
+  - name: node.rules
+    rules:
+      - alert: HighCPUUsage
+        expr: avg by (instance) (rate(node_cpu_seconds_total{mode!="idle"}[5m])) > 0.8
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "CPU usage is > 80% for 2 minutes on {{ $labels.instance }}"
+          description: |
+            CPU utilization has been above 80% for more than 2 minutes.
+            VALUE = {{ $value | printf "%.2f" }}

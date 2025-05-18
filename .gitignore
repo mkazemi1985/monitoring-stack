@@ -1,0 +1,6 @@
+# Docker volumes
+prom_data/
+grafana_data/
+# IDE / OS files
+*.swp
+.DS_Store
